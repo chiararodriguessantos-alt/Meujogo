@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Primeiro Jogo de Plataforma</title>
+    <title>A Jornada do Pequeno Goblin</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="game-container">
-        <!-- O Canvas é onde o jogo será desenhado -->
-        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        <canvas id="gameCanvas" width="800" height="450"></canvas>
         
-        <!-- Interface de Usuário (HUD e Telas) -->
         <div id="ui-layer">
             <div id="hud">
-                <span>Pontos: <span id="scoreDisplay">0</span></span>
+                <span>Moedas: <span id="scoreDisplay">0</span></span>
+                <span id="zoneDisplay">Zona: Floresta Gigante</span>
                 <span>Vidas: <span id="livesDisplay">3</span></span>
             </div>
+
+            <div id="controls-hint">
+                Mover: A/D ou Setas | Pular: Espaço/W | Abaixar: S/Baixo | Atirar Flecha: F ou J
+            </div>
             
-            <!-- Tela de Mensagem (Escondida por padrão) -->
             <div id="messageScreen" class="hidden">
-                <h1 id="messageTitle">Game Over</h1>
-                <button id="restartBtn">Jogar Novamente</button>
+                <h1 id="messageTitle">Fim de Jogo</h1>
+                <p id="messageDesc">Os monstros venceram...</p>
+                <button id="restartBtn">Tentar Novamente</button>
             </div>
         </div>
     </div>
 
-    <!-- O script do jogo é carregado por último -->
     <script src="script.js"></script>
 </body>
 </html>
