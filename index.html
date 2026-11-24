@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Jogo de Plataforma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- O Canvas é onde o jogo será desenhado -->
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        
+        <!-- Interface de Usuário (HUD e Telas) -->
+        <div id="ui-layer">
+            <div id="hud">
+                <span>Pontos: <span id="scoreDisplay">0</span></span>
+                <span>Vidas: <span id="livesDisplay">3</span></span>
+            </div>
+            
+            <!-- Tela de Mensagem (Escondida por padrão) -->
+            <div id="messageScreen" class="hidden">
+                <h1 id="messageTitle">Game Over</h1>
+                <button id="restartBtn">Jogar Novamente</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- O script do jogo é carregado por último -->
+    <script src="script.js"></script>
+</body>
+</html>
